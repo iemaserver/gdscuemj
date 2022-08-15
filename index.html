@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="theme-color" content="#0A192F" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="author" content="GDSC University Of Engineering and Management" />
+        <meta name="description" content="Google Developer Student Clubs (GDSC) is a initiative of Google Developers for university students to enhance their skills while working in team and building a good team spirit  .">
+        <meta name="keywords" content="GDSC University Of Engineering and Management,google developers, computer science" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="img/dsc_logo.png" />
+        <link rel="stylesheet" href="name_change.css">
+
+        <script src="index.js"></script>
+        <title>GDSC UEMJ</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="row">
+            <nav class='mainNav'>
+                <ul class='mainNav-nav'>
+                    <li class="logo">
+                        <a href="#" class="nav-link">
+                            <span class="link-text logo-text">GDSC UEMJ</span>
+                            <svg width="558" height="558" viewBox="0 0 558 558" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="558" height="558" fill="url(#pattern0)"/>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0" transform="scale(0.00347222)"/>
+                                </pattern>
+                                <image id="image0" width="288" height="288" xlink:href="data:image/png;base64,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"/>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mainNav-item">
+                        <a href="#home" class="nav-link">
+                            <i class="fas fa-list"></i>
+                            <span class="link-text">Overview</span>
+                        </a>
+                    </li>
+                    <li class="mainNav-item">
+                        <a href="#technologies" class="nav-link">
+                            <i class="fas fa-microchip"></i>
+                            <span class="link-text">Technologies</span>
+                        </a>
+                    </li>
+                    <li class="mainNav-item">
+                        <a href="#" target="_blank" class="nav-link">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span class="link-text">Leaderboard(30 Days Cloud Program)</span>
+                        </a>
+                    </li>
+                    <li class="mainNav-item">
+                        <a href="#" target="_blank" class="nav-link">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span class="link-text">Leaderboard(Android Study Jams)</span>
+                        </a>
+                    </li>
+                    <li class="mainNav-item">
+                        <a href="#portfolio" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span class="link-text">Team</span>
+                        </a>
+                    </li>
+                    <li class="mainNav-item">
+                        <a href="#events" class="nav-link">
+                            <i class="fas fa-calendar-check"></i>
+                            <span class="link-text">Events</span>
+                        </a>
+                    </li>
+                    <li class="mainNav-item">
+                        <a href="#sponsers" class="nav-link">
+                            <i class="fas fa-handshake"></i>
+                            <span class="link-text">Sponsers</span>
+                        </a>
+                    </li>
+                    <li class="mainNav-item">
+                        <a href="#showcase" class="nav-link">
+                            <i class="fas fa-trophy"></i>
+                            <span class="link-text">Showcase</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Main Container -->
+        <div class="mainContainer">
+            <section class="mainsection" id="home">
+                <div>
+                    
+                </div>
+                <img src="img/assets/bg.gif" class="bg">
+                
+                
+                <div class="content" id="home" data-aos="fade-up">
+                    <h20><span class="rd">Google </span></h20>
+                      <h21>  <span class="bl"> Developer</span></h21>
+                        <h22><span class="gr"> Student</span></h22>
+                        <h23><span class="yl"> &nbsp;Club </span></h23>
+                        <h2><br> University Of Engineering and Management.
+                    </h2>
+                    <h4>Google Developer Student Clubs (GDSC) is a initiative of Google Developers for university students to enhance their skills while working in team and building a good team spirit .</h4>
+                    
+                    <div>
+                        <a href="https://gdsc.community.dev/university-of-engineering-management-jaipur/" rel="noopener" target="_blank" class="button">Become Member</a>
+                    </div>
+                </div>
+                
+            </section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <div class="card dark_card">
+                            <i class="fas fa-rocket ghost-blue"></i>
+                            <h4 class="feature-title">Concept of GDSC</h4>
+                            <p>The GDSC program is a grassroots channel through which Google provides development
+                                skills, while enhancing the quality of being and enjoying the events .
+    
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="card dark_card">
+                            <i class="fas fa-lightbulb ghost-green"></i>
+                            <h4 class="feature-title">Why GDSC?</h4>
+                            <p>For students to learn development skills, solve problems through technology
+                                and inspire them to be world class developers and changemakers.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="card dark_card">
+                            <i class="fas fa-users ghost-red"></i>
+                            <h4 class="feature-title">Target audience</h4>
+                            <p>GDSC activities are targeted at University students and any others
+                                including faculty members who want to learn development skills &amp; work to solve
+                                real-life
+                            problems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="opportunities" class="section-spacer section-opp">
+            <div class="container">
+                <div class="fk">
+                    <header class="section-header text-center">
+                        <h2>Opportunities GDSCs provide students with</h2>
+                    </header>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card-body wow fadeInUp">
+                                <ul>
+                                    <li>Grow their knowledge on developer technologies and more through peer to peer
+                                        workshops
+                                        and
+                                        events.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card-body wow fadeInUp">
+                                <ul>
+                                    <li>Gain relevant industry experience by solving problems for local organizations with
+                                        technology based solutions.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card-body wow fadeInUp">
+                                <ul>
+                                    <li>Showcase their prototypes and solutions to their local community and industry
+                                        leaders.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card-body wow fadeInUp">
+                                <ul>
+                                    <li>Getting inspiration to become world-class developers and changemakers from
+                                        sharing others' success stories.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======= Technologies Section ======= -->
+        <section id="technologies" class="section-spacer">
+            <div class="container">
+                <header class="section-header text-center">
+                    <h2 class="section-title wow fadeInUp">Technologies we're excited about</h2>
+                    <p class="section-subtitle">Opportunities to learn & access deep technical content.</p>
+                    <br>
+                </header>
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="feature-list-image">
+                            <img src="img/assets/technologies/android.png" class="img-fluid" alt="Official android logo"
+                            width="300" height="50%">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ml-auto wow fadeInUp">
+                        <div class="feature-list-wrapper">
+                            <div class="content-header">
+                                <h2 class="content-title">Android Development</h2>
+                                <p>Every year Google developers release exciting new updates to the world's most popular
+                                    operating system.
+                                    We always have sessions to keep you updated and mastering the latest trends in modern
+                                Android development.</p>
+                            </div>
+                            <a href="https://codelabs.developers.google.com/?cat=Android" class="hero-button" target="_blank"
+                            rel="noreferrer">Codelabs &nbsp; &nbsp;<i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-spacer">
+            <div class="container">
+                <div class="row flex-column-reverse flex-sm-row align-items-cengit ter">
+                    <div class="col-sm-6 mr-auto wow fadeInUp">
+                        <div class="feature-list-wrapper">
+                            <div class="content-header">
+                                <h2 class="content-title">Web Development</h2>
+                                <p>Learn the core foundations of a delightful web experience both for the user and
+                                    developer.
+                                    Stay up to tabs
+                                    with emerging and trending technologies. Get access to a guided, tutorial and hands-on
+                                    coding experience.
+                                </p>
+                            </div>
+                            <a href="https://codelabs.developers.google.com/?cat=Web" class="hero-button" target="_blank"
+                            rel="noreferrer">Codelabs &nbsp; &nbsp;<i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="feature-list-image">
+                            <img src="img/assets/technologies/web.png" alt="Developer building a progressive web app"
+                            class="img-fluid" height="60%" width="90%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="hip" class="section-spacer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="feature-list-image">
+                            <img src="img/assets/technologies/cloud.png" class="img-fluid" alt="Illustration of data uploading to the cloud"
+                            width="90%">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ml-auto wow fadeInUp">
+                        <div class="feature-list-wrapper">
+                            <div class="content-header">
+                                <h2 class="content-title">Cloud Computing</h2>
+                                <p>For passionate developers who want to stay relevant in a cloud first world where
+                                    businesses
+                                    demand for agility and
+                                    innovation and prompt rise of cloud-native applications to
+                                bridges gaps between data, insight, and action.</p>
+                            </div>
+                            <a href="https://codelabs.developers.google.com/?cat=Cloud" class="hero-button" target="_blank"
+                            rel="noreferrer">Codelabs &nbsp; &nbsp;<i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-spacer">
+            <div class="container">
+                <div class="row flex-column-reverse flex-sm-row align-items-cengit ter">
+                    <div class="col-sm-6 mr-auto wow fadeInUp">
+                        <div class="feature-list-wrapper">
+                            <div class="content-header">
+                                <h2 class="content-title">Machine Intelligence</h2>
+                                <p>Learn how to drive user engagement and retention with intelligent apps that are able to
+                                    effectively serve users what they need without the fuss by providing these systems with
+                                    the
+                                    ability to
+                                    automatically learn and improve from experience without being explicitly programmed.
+                                </p>
+                            </div>
+                            <a href="https://codelabs.developers.google.com/?cat=TensorFlow" class="hero-button" target="_blank"
+                            rel="noreferrer">Codelabs &nbsp; &nbsp;<i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="feature-list-image">
+                            <img src="img/assets/technologies/mi.png" class="img-fluid" alt="Robotic illustration of how many different things it can do"
+                            height="60%" width="90%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======= Team Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container" style="padding-left: 40px;padding-right: 40px;">
+                <header class="section-header text-center">
+                    <h2 class="section-title wow fadeInUp">Our Team</h2>
+                    <p class="section-subtitle">Passionate students and faculty staff driving the success of the program.</p>
+                </header>
+                
+                
+                <div class="row align-items-center">
+                    <ul class="teams" align="center" data-aos="fade-up">
+                        <li class="tab-link current" data-tab="team-1">Core team</li>
+                        <li class="tab-link" data-tab="team-2">Tech - Web  Team</li>
+                        <li class="tab-link" data-tab="team-5">Operation Team</li>
+                        <li class="tab-link" data-tab="team-6">Content Writting Team</li>
+                    </ul>
+<!----------------------------------------------------Member's--------------------------------------------------------------------->
+                    <div id="team-1" class="team-content current">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Sahitya Roy</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Lead
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+<!----------------------------------------------------Image--------------------------------------------------------------------->
+                                                <img class="img-responsive" src="img/assets/members/Sahitya.jpeg">
+                                            </div>
+<!----------------------------------------------------description------------------------------------------------------------------->
+                                            <div class="mc-description">
+                                                Building India's largest Community EduhubCommunity | GDSC Lead'23 | Microsoft LSA | DevRel🥑| 1.4k Subscriber | Keynote Speaker | Working @iNeuron.ai | Open Source Advocate👨‍💻| Az-Dev Lead | Building @GSoC Community☀️
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/sahitya-roy
+                                                ">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="https://github.com/SahityaRoy">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Priya Chandak</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Community Lead
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+<!----------------------------------------------------Image--------------------------------------------------------------------->
+                                                <img class="img-responsive" src="img/assets/members/Priya.jpeg">
+                                            </div>
+<!----------------------------------------------------Description--------------------------------------------------------------------->           
+                                <div class="mc-description">
+                                               Passionate about coding and content . Engineering student with problem-solving skills and ability to perform well in a team. Student of B.Tech Computer science engineering from University Of Engineering and management , Jaipur.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" href="https://www.linkedin.com/in/priya-chandak-ba0a6b178/" target="_blank">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="#">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Amar Sansil</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Program manager
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+<!----------------------------------------------------Image--------------------------------------------------------------------->
+                                                <img class="img-responsive" src="img/assets/members/Amar.jpeg">
+                                            </div>
+<!----------------------------------------------------Image--------------------------------------------------------------------->
+                                            <div class="mc-description">
+                                                I'm self-motivated, confident, and hardworking. I'm extremely enthusiastic about learning skills and gaining various experiences. I've the ability to work well in managing. Trustworthy and committed.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/amar-sansil-3371721b7">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="https://github.com/amarsansil">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Yash Yadav</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Tech Lead
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+<!----------------------------------------------------Image--------------------------------------------------------------------->
+                                                <img class="img-responsive" src="img/assets/members/Yash.jpeg">
+                                            </div>
+<!----------------------------------------------------Image--------------------------------------------------------------------->
+                                            <div class="mc-description">
+                                                I always dreamt of being a part of Google and the journey just began ,I am loving the position of Tech lead and would love to contribute towards community .
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/yash-yadav-08baa6153/">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="https://github.com/ALPHAWINS02">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                           
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>                            
+                           
+                           
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Sameer Singh</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                           Co-Tech Lead 
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Sameer.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                               I am Sameer Singh , I am the GDSC Co-Tech Lead for University of Engineering and Management.
+                                               I have done project's on Web devlopment.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/sameer-singh-21512022a">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="#">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Subham Gouisaria</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Event manager
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/SubhamG.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                                I am a Machine Learning ,Web Developer and Data science enthusiast, also efficient in Event management and Digital Marketing.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/subham-gourisaria-a13418201">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="https://github.com/SubhamBnk">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Ishika saraf</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        C.P Executive
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Ishika.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                               I am a competitive programmer. I started my journey with CodeChef solving problems in C++ and now I know many languages like C,C++,Python, Java and in  participated in many  coding contests and won many of them apart from this I would love to contribute and volunteer in GDSC.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/ishika-saraf-263215210/">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="#">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Anushree Das</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Graphic Designer
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Anusree.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                               Hi! I am Anusree Das. I am the GDSC Designing Lead for University of Engineering and Management, Jaipur. I have a deep passion for Graphic designing ,technology and development. I have a knack for Web Development and Cyber Security. I believe in the power of community and have hosted many events. I have looked into and worked around an immense variety of technologies in various languages. When I am not on Computer, I spend most of my time in drawing. I have had a journey full of learning and I am looking forward to learn and grow!
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/anusree-das-01
+                                                ">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="#">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>          
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Aditya Pratap</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Marketing Executive
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Aditya.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                                I am always fond of community work, and now I am working as a Marketing lead.My aim is to Develop a marketing communications between different resources.I want to Develop a media communications so that you don't miss any important update.                                                                                               
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/aditya-pratap-64b200245">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="https://github.com/Aditya-Pratap-01">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+    
+                <div id="team-2" class="team-content ">
+                        <div class="row justify-content-center">
+
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Yash Yadav</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Tech Lead
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+<!----------------------------------------------------Image--------------------------------------------------------------------->
+                                                <img class="img-responsive" src="img/assets/members/Yash.jpeg">
+                                            </div>
+<!----------------------------------------------------Image--------------------------------------------------------------------->
+                                            <div class="mc-description">
+                                                I always dreamt of being a part of Google and the journey just began ,I am loving the position of Tech lead and would love to contribute towards community .
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/yash-yadav-08baa6153/">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="https://github.com/ALPHAWINS02">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                           
+                                        </div>
+                                    </article>
+                                </div>
+                            </div> 
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Sameer Singh</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                           Co-Tech Lead 
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Sameer.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                                I am Sameer Singh , I am the GDSC Co-Tech Lead for University of Engineering and Management.
+                                               I have done project's on Web devlopment.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/sameer-singh-21512022a">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="#">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                           
+                            
+                        </div>
+                 </div>
+                    
+                   
+                    <div id="team-5" class="team-content ">
+                        <div class="row justify-content-center">
+                             <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Yash Raj Anand</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Operation Team
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/yashraj.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                                I am Yashraj from gdsc i would love to work under GDSC.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/yash-raj-anand-0ab34a21b">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="https://github.com/Yash2624">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Aman Verma</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Operation Team
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Aman.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                                Creative and people-oriented Computer Student with intermediate project management experience & Adequate knowledge of software and relevant languages.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/aman-kumar-verma-3b846b216">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="https://github.com/Vermaaman16">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Subham Kr. Singh</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Operation Team 
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Subham.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                                I AM SUBHAM SINGH AND I AM GRATEFUL TO GET AN 
+                                                OPPORTUNITY TO WORK FOR GDSC WITH TEAM SPIRIT. 
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/subham-singh-850a20234">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="#">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="team-6" class="team-content ">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Roshan Kumar</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Tech Content Writter
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Roshan.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                              Myself Roshan Kumar pursuing BTech CSE AIML from University of engineering and management jaipur, a keen learner and enthusiastic. Full of  Confidence and free to explore new facts ☺️.
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/roshan-kumar-914089222
+                                                ">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="#">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>  
+
+                            <div class="col-lg-4 col-md-6 portfolio-item">
+                                <div class="portfolio-wrap">
+                                    <article class="material-card Indigo">
+                                        <h2>
+                                        <span>Arka Chatterjee</span>
+                                        <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        Content Writter
+                                        </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="img/assets/members/Arka.jpeg">
+                                            </div>
+                                            <div class="mc-description">
+                                               I am Arka Chatterjee ,Currently studying in B.Tech (CSE) 
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <a class="mc-btn-action" target="_blank" href="https://www.linkedin.com/in/arka-chatterjee-he-him-b88322192">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a class="mc-btn-action" target="_blank" href="#">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>                  
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- End Team Section -->
+        <!-- Event Section -->
+        <section id="events">
+            <div class="container">
+                <header class="section-header text-center">
+                    <h2 class="section-title wow fadeInUp">Events & Workshops</h2>
+                    <p class="section-subtitle">Let's learn, share knowledge and connect with each other.</p>
+                </header>
+                <div class="row align-items-center">
+                    <ul class="tabs" align="center" data-aos="fade-up">
+                        <li class="tab-link current" data-tab="tab-1">Ongoing Events</li>
+                        <li class="tab-link" data-tab="tab-2">Past Events</li>
+                    </ul>
+                    <div id="tab-1" class="tab-content current" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row justify-content-center prj" style="display: flex !important;">
+                            <div class="col-md-4 col-12">
+                                <div class="card event-card wow fadeInUp" style="color: #fff;">
+                                    <img alt="Event three poster" class="card-img-top" src="img/assets/events/Edu.jpeg">
+                                    <div class="card-body">
+                                        <h5 class="card-title"> Upcoming event </h5>
+                                        
+                                        <table>
+                                            <tr>
+                                                <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                                                
+                                                <td>Event Day: 22 Aug 2022</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-green"><i class="far fa-clock"></i></td>
+                                                
+                                                <td>10:30 AM</td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-md-4 col-12">
+                                <div class="card event-card wow fadeInUp" style="color: #fff;">
+                                    <img alt="Event three poster" class="card-img-top" src="img/assets/events/flutter.jpeg">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Flutter Festival</h5>
+                                        
+                                        <table>
+                                            <tr>
+                                                <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                                                
+                                                <td>Event Day: &nbsp;&nbsp; 14<sup>th</sup> February - 30<sup>th</sup> March</td>
+                                            </tr>
+                                             <tr>
+                                                <td class="text-green"><i class="far fa-clock"></i></td>
+                                                
+                                                <td>--</td>
+                                            </tr> -->
+                                        <!-- </table>
+                                        <div class="col-md-6 col-6 mt-3">
+                                            <a href="https://www.youtube.com/playlist?list=PLOl8TbOSTlwBQqqkixKG_7TLuikBn-sFt" class="btn btn-danger" target="_blank">EVENT
+                                            VIDEOS&nbsp;<i class="fas fa-video"></i></a>
+                                            <br>
+                                        </div>
+                                        <br>
+                                        
+                                    </div>
+                                </div>
+                            </div> -->
+                            
+                           <!--  <div class="col-md-4 col-12">
+                                <div class="card event-card wow fadeInUp" style="color: #fff;">
+                                    <img alt="Event three poster" class="card-img-top" src="img/assets/events/reactjs.jpeg">
+                                    <div class="card-body">
+                                        <p class="level beginner float-right">Beginner</p>
+                                        <h5 class="card-title">React.js Workshop For Beginners</h5>
+                                        
+                                        <table>
+                                            <tr>
+                                                <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                                                <td>Event Start Day: &nbsp;&nbsp;4<sup>th</sup> January 2022</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                                                <td>Event End Day: &nbsp;&nbsp;9<sup>th</sup> January 2022</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-green"><i class="far fa-clock"></i></td>
+                                                <td>5:00 PM</td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <a href="https://forms.gle/iPax5rRgKxroUPgt8" target="_blank" class="btn btn-primary float-right">Enroll Here</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- <div id="tab-2" class="tab-content" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row  prj" style="display: flex !important;">
+
+                            <div class="col-md-6">
+                                
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/flutter.jpeg" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Flutter Festival</h5>
+                                                <p class="card-text">
+                                                    
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/playlist?list=PLOl8TbOSTlwBQqqkixKG_7TLuikBn-sFt" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEOS&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/solutionchallenge.PNG" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Solution Challenge 2022 Information Session</h5>
+                                                <p class="card-text">
+                                                    This was the Informatory Session for the Solution Challenge where the audience were introduced What Solution Challenge is? What are the United Nations 17 Sustainable Development Goals? Also discussed the Complete Solution Challenge 2022 Timeline of Registration, Submission and Decision, the terms and conditions such as eligibility criteria, how to enter the contest, judging criteria, prizes for winners and many more. 
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/playlist?list=PLOl8TbOSTlwAG8YHq4ZvYxxexCKioS_Gk" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEOS&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/Ui Ux.jpeg" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Design to Develop</h5>
+                                                <p class="card-text"> -->
+                                                    <!-- This was Hands-on Design to Develop Workshop where we create website UI UX Design with Figma and Code the website from design -->
+                                                    <!-- This was a hands-on Design to Develop Workshop where we created website UI/UX Design with Figma and coded the website from the design.
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/playlist?list=PLOl8TbOSTlwAIuBnffiqjWTObhTsis_S0" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEOS&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://github.com/DSC-Aiktc/Design-to-Develop" class="btn btn-primary" target="_blank">EVENT
+                                                            CODE&nbsp;&nbsp;<i class="fas fa-code"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/google_cloud.png" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">30 Days of Google Cloud</h5>
+                                                <p class="card-text"> -->
+                                                    <!-- This was the sessions of 30 Days of Google Cloud. This session will make you aware of Google Cloud and solve your doubts. So make sure you will see this session and will make sure you all enjoy and learn. -->
+                                                    <!-- This was the session of 30 Days of Google Cloud. This session created awareness of Google Cloud and solved doubts.
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/playlist?list=PLOl8TbOSTlwBfZwLanlPULfah6USP-jHx" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEOS&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/Poster.png" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Inaugration Ceremony 2021</h5>
+                                                <p class="card-text"> -->
+                                                    <!-- This was the introductory session of Google Developer Student Club (GDSC). This session will make you aware of our club, our team members, our goals, and moreover wonderful opportunities waiting for you. So make sure you will see this session and will make sure you all enjoy and learn. -->
+                                                    <!-- This was the introductory session of Google Developer Student Club (GDSC). This session introduced our club, our team members, our goals, and moreover, wonderful opportunities waiting for all.
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/watch?v=7hogrfiSe2Q" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEO&nbsp;&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/reactjs.jpeg" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">React.js Workshop For Beginners</h5>
+                                                <p class="card-text"> -->
+                                                    <!-- This was the sessions of ReactJs. This session will make you aware of ReactJs and solve your doubts along with creating a blog app. So make sure you will see this session and will make sure you all enjoy and learn. -->
+                                                    <!-- These were the sessions of ReactJS. This session introduced ReactJS to beginners and also solved their doubts along with creating a blog app.
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/playlist?list=PLOl8TbOSTlwAn8qUO-Q4lENzvk0pwpfte" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEOS&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://github.com/DSC-Aiktc/Bloggy-App-React.js-Workshop" class="btn btn-primary" target="_blank">EVENT
+                                                            CODE&nbsp;&nbsp;<i class="fas fa-code"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/android.jpeg" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Android Study Jams</h5>
+                                                <p class="card-text"> -->
+                                                    <!-- his was the sessions of Android Study Jams. This session will make you aware of Kotlin and solve your doubts. So make sure you will see this session and will make sure you all enjoy and learn. -->
+                                                    <!-- These were the sessions of Android Study Jams. These sessions made students aware of Kotlin and solved their doubts. We made sure that everyone enjoyed and learned through these sessions. So if you have missed it, do watch them on our Youtube channel. All the videos and code links are given below.
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/playlist?list=PLOl8TbOSTlwC-Kwo50a9wUWeSpnmNPBUk" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEOS&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://github.com/DSC-Aiktc/Android-Study-Jam-Kotlin-Workshop" class="btn btn-primary" target="_blank">EVENT
+                                                            CODE&nbsp;&nbsp;<i class="fas fa-code"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/hacktober.jpeg" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Hacktoberfest with Jina AI</h5>
+                                                <p class="card-text"> -->
+                                                    <!-- This was the session of Hacktoberfest with Jina AI. This session will make you aware of Hacktoberfest and solve your doubts. So make sure you will see this session and will make sure you all enjoy and learn. -->
+                                                    <!-- This was the session of Hacktoberfest with Jina AI. This session raised awareness of Hacktoberfest and solved doubts.
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/watch?v=qd3M4Pzay6E" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEO&nbsp;&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3" style="color:#fff;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="img/assets/events/workshop1.jpeg" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Front-End Web Development Workshop</h5>
+                                                <p class="card-text">
+                                                    This was a hands-on Front-End Web Development Workshop where we discussed<br>
+                                                    1. HTML AND CSS<br>
+                                                    2. JAVASCRIPT<br>
+                                                    3. BUILT PERSONAL PORTFOLIO WEBSITE<br>
+                                                    Watch our Workshop YouTube videos if you have missed the workshop.<br>
+                                                </p>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://www.youtube.com/playlist?list=PLOl8TbOSTlwDVQb2ZcVDiPLNkW-kg6Mk2" class="btn btn-danger" target="_blank">EVENT
+                                                            VIDEOS&nbsp;<i class="fas fa-video"></i></a>
+                                                            <br>
+                                                        </div>
+                                                        <div class="col-md-6 col-6">
+                                                            <a href="https://github.com/DSC-Aiktc/3-days-of-frontend-web-development-workshop" class="btn btn-primary" target="_blank">EVENT
+                                                            CODE&nbsp;&nbsp;<i class="fas fa-code"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="col-md-12">
+                                            <h5 class="card-title">Top 3 Participants of Workshop</h5>
+                                            <video style="width: 100%; height: auto;" controls>
+                                                <source src="https://dms.licdn.com/playlist/C4E05AQHMeqaehuMIdQ/mp4-640p-30fp-crf28/0/1633972294079?e=1634317200&v=beta&t=rBVZebyZyCAtUvdYbkG-7hl8048VkQrln_XA8VMDauU" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div> 
+                                </div>       
+                            </div> -->
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Sponsers Section -->
+
+        <!--<section id="sponsers" class="section-spacer">
+            <div class="container">
+                <header class="section-header text-center">
+                    <h2 class="section-title wow fadeInUp">Our Sponsers</h2>
+                    <p class="section-subtitle"></p>
+                </header>
+                <div class="row  justify-content-center prj align-items-center" style="display: flex !important;">
+                     <div class="col-sm-12 col-md-6">
+                        <div class="card sponserCard">
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card-body wow fadeInUp">
+                                        <img src="img/assets/sponsers/Newton School.jpeg" class="card-img-top" alt="...">
+                                        <header class="section-header text-center my-3">
+                                            <h2>Newton School</h2>
+                                        </header>
+                                        <p>ᴇxᴘʟᴏʀᴇ 𝐭𝐡𝐞 𝐂𝐨𝐝𝐢𝐧𝐠 𝐆𝐚𝐥𝐚𝐱𝐲 ᴡɪᴛʜ ɪɴᴅɪᴀ’ꜱ ᴍᴏꜱᴛ ᴛʀᴜꜱᴛᴇᴅ 𝐎𝐧𝐥𝐢𝐧𝐞 𝐂𝐨𝐝𝐢𝐧𝐠 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐨𝐧 🚀 
+                                        ᴘʀᴇꜱᴇɴᴛᴇᴅ ʙʏ 𝐍𝐞𝐰𝐭𝐨𝐧 𝐒𝐜𝐡𝐨𝐨𝐥  💫⚡<br><br>
+                                        
+                                        | 𝐏𝐫𝐢𝐳𝐞 𝐌𝐨𝐧𝐞𝐲 & 𝐆𝐢𝐟𝐭 𝐕𝐨𝐮𝐜𝐡𝐞𝐫𝐬 𝐰𝐨𝐫𝐭𝐡- ₹ 30,000 | 𝐅𝐫𝐞𝐞 𝐑𝐞𝐠𝐢𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧 |💰
+                                        𝘌𝘭𝘪𝘨𝘪𝘣𝘪𝘭𝘪𝘵𝘺 - 𝘍𝘪𝘳𝘴𝘵 𝘵𝘰 𝘍𝘪𝘯𝘢𝘭 𝘠𝘦𝘢𝘳, 𝘈𝘤𝘳𝘰𝘴𝘴 𝘢𝘭𝘭 𝘚𝘵𝘳𝘦𝘢𝘮𝘴<br><br>
+                                        
+                                        𝐀𝐩𝐩𝐥𝐲 𝐟𝐫𝐨𝐦 𝐋𝐢𝐧𝐤: <a href="https://bit.ly/NSxAKTCJ" style="text-decoration: none;">https://bit.ly/NSxAKTCJ</a><br><br>
+                                        
+                                        💡𝐄𝐱𝐜𝐥𝐮𝐬𝐢𝐯𝐞 𝐅𝐫𝐞𝐞 𝐎𝐧𝐥𝐢𝐧𝐞 𝐂𝐨𝐝𝐢𝐧𝐠 𝐂𝐨𝐮𝐫𝐬𝐞 𝐀𝐜𝐜𝐞𝐬𝐬 𝐟𝐨𝐫 𝐏𝐚𝐫𝐭𝐢𝐜𝐢𝐩𝐚𝐧𝐭𝐬 & 𝕮𝖊𝖗𝖙𝖎𝖋𝖎𝖈𝖆𝖙𝖊!💡
+                                        𝕃𝕒𝕟𝕘𝕦𝕒𝕘𝕖𝕤 𝕦𝕤𝕖𝕕 𝕒𝕣𝕖: 𝕔/𝕔++/𝕛𝕒𝕧𝕒/𝕛𝕒𝕧𝕒𝕤𝕔𝕣𝕚𝕡𝕥/𝕡𝕪𝕥𝕙𝕠𝕟.
+                                        𝕄𝕠𝕕𝕖: 𝕆𝕟𝕝𝕚𝕟𝕖<br><br>
+                                        
+                                        𝐃𝐚𝐭𝐞 𝐨𝐟 𝐂𝐨𝐧𝐭𝐞𝐬𝐭: 28ᴛʜ ᴊᴀɴ 2022 (ꜰʀɪ) 𝐚𝐭 𝟐𝟏:𝟎𝟎 𝐭𝐨 𝟐𝟑:𝟑𝟎 𝐡𝐨𝐮𝐫𝐬.<br><br>
+                                        
+                                        ℭ𝔬𝔪𝔭𝔢𝔱𝔢 𝔴𝔦𝔱𝔥 𝔱𝔥𝔢 𝔅𝔢𝔰𝔱 ℭ𝔬𝔡𝔢𝔯𝔰 𝔬𝔣 𝔱𝔥𝔢 𝔚𝔬𝔯𝔩𝔡! 🚩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+<!-- 
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card sponserCard">
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card-body wow fadeInUp">
+                                        <img src="img/assets/sponsers/Newton School 2.jpeg" class="card-img-top" alt="...">
+                                        <header class="section-header text-center my-3">
+                                            <h2>Newton School</h2>
+                                        </header>
+                                        <p>
+                                            What? Multiverse Is Real?😳<br><br>
+
+                                            "No Way Home" for our favorite 🕸️ Spiderman Until he solves the Coding Mystery at our very own The Grand Coding Contest Presented by Newton School🤩. <br><br>
+
+                                            💰| Prize Money & Gift Prizes worth Rs. 10 lakh | Free Registration |<br><br>
+
+                                            Newton School is organizing India's Premier The Grand Coding Contest for all the coders around the world. Compete with the best coders among World's top Universities and have experiences of Coding Competition like never before.😎<br><br>
+
+                                            Eligibility- Open to All<br>
+                                            Date of Contest: 31st MARCH 2022 (THUR)<br>
+                                            💡 REGISTER NOW - <a href="https://bit.ly/NS-AIKT" style="text-decoration: none;">https://bit.ly/NS-AIKT</a><br><br>
+
+                                            (Apply today to gain access to the Exclusive Free Courses designed by IIT Alumni & ICPC Finalists)<br><br>
+
+                                            It's time to feel the Heat, thrive for Excellence, and bring the Glory Home! 🚩 <br><br>
+
+                                            To be a part of Lucky Draw and win exciting prizes like Apple AirPods, Kindle, Amazon Gift Vouchers and Newton School Goodies.🤩<br><br>
+
+                                            💡 Fill up the form NOW: <a href="https://forms.gle/VYc7ZgYU9pYfgA7h8" style="text-decoration: none;">https://forms.gle/VYc7ZgYU9pYfgA7h8</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                   <!-- <div class="col-sm-12 col-md-6">
+                        <div class="card sponserCard">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card-body wow fadeInUp">
+                                        <img src="img/assets/sponsers/Newton School 3.jpeg" class="card-img-top" alt="..." style="height:500px;width:100%;">
+                                        <header class="section-header text-center my-3">
+                                            <h2>Newton School</h2>
+                                        </header>
+                                        <p>
+                                        ᴇxᴘʟᴏʀᴇ 𝐭𝐡𝐞 𝐂𝐨𝐝𝐢𝐧𝐠 𝐆𝐚𝐥𝐚𝐱𝐲 ᴡɪᴛʜ ɪɴᴅɪᴀ’ꜱ ᴍᴏꜱᴛ ᴛʀᴜꜱᴛᴇᴅ 𝐎𝐧𝐥𝐢𝐧𝐞 𝐂𝐨𝐝𝐢𝐧𝐠 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐨𝐧 🚀 <br>
+                                        ᴘʀᴇꜱᴇɴᴛᴇᴅ ʙʏ 𝐍𝐞𝐰𝐭𝐨𝐧 𝐒𝐜𝐡𝐨𝐨𝐥 ⚡<br><br>
+
+                                        | 𝐏𝐫𝐢𝐳𝐞 𝐌𝐨𝐧𝐞𝐲 & 𝐆𝐢𝐟𝐭 𝐕𝐨𝐮𝐜𝐡𝐞𝐫𝐬 𝐰𝐨𝐫𝐭𝐡- ₹ 30,000 | 𝐅𝐫𝐞𝐞 𝐑𝐞𝐠𝐢𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧 |💰
+                                        𝘌𝘭𝘪𝘨𝘪𝘣𝘪𝘭𝘪𝘵𝘺 - 𝘍𝘪𝘳𝘴𝘵 𝘵𝘰 𝘍𝘪𝘯𝘢𝘭 𝘠𝘦𝘢𝘳, 𝘈𝘤𝘳𝘰𝘴𝘴 𝘢𝘭𝘭 𝘚𝘵𝘳𝘦𝘢𝘮𝘴<br><br>
+
+                                        𝐀𝐩𝐩𝐥𝐲 𝐟𝐫𝐨𝐦 𝐋𝐢𝐧𝐤 <a href="https://bit.ly/NS-AIKTA" style="text-decoration: none;">https://bit.ly/NS-AIKTA</a><br><br>
+
+                                        💡𝐄𝐱𝐜𝐥𝐮𝐬𝐢𝐯𝐞 𝐅𝐫𝐞𝐞 𝐎𝐧𝐥𝐢𝐧𝐞 𝐂𝐨𝐝𝐢𝐧𝐠 𝐂𝐨𝐮𝐫𝐬𝐞 𝐀𝐜𝐜𝐞𝐬𝐬 𝐟𝐨𝐫 𝐏𝐚𝐫𝐭𝐢𝐜𝐢𝐩𝐚𝐧𝐭𝐬 & 𝕮𝖊𝖗𝖙𝖎𝖋𝖎𝖈𝖆𝖙𝖊!💡<br>
+                                        𝕃𝕒𝕟𝕘𝕦𝕒𝕘𝕖𝕤 𝕦𝕤𝕖𝕕 𝕒𝕣𝕖: 𝕔/𝕔++/𝕛𝕒𝕧𝕒/𝕛𝕒𝕧𝕒𝕤𝕔𝕣𝕚𝕡𝕥/𝕡𝕪𝕥𝕙𝕠𝕟.<br>
+                                        𝕄𝕠𝕕𝕖: 𝕆𝕟𝕝𝕚𝕟𝕖<br><br>
+
+                                        𝐃𝐚𝐭𝐞 𝐨𝐟 𝐂𝐨𝐧𝐭𝐞𝐬𝐭: 29ᴛʜ April 2022 𝐚𝐭 𝟐𝟏:𝟎𝟎 𝐭𝐨 𝟐𝟑:𝟑𝟎 𝐡𝐨𝐮𝐫𝐬.<br><br>
+
+                                        ℭ𝔬𝔪𝔭𝔢𝔱𝔢 𝔴𝔦𝔱𝔥 𝔱𝔥𝔢 𝔅𝔢𝔰𝔱 ℭ𝔬𝔡𝔢𝔯𝔰 𝔬𝔣 𝔱𝔥𝔢 𝔚𝔬𝔯𝔩𝔡! 🚩
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!-- here you can add more  -->
+                    <!--
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-6 col-md-6 mb-3">
+                    </div>-->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Showcase Section 
+        <section id="showcase" class="section-spacer">
+            <div class="container">
+                <header class="section-header text-center">
+                    <h2 class="section-title wow fadeInUp">Showcase</h2>
+                    <p class="section-subtitle">Top 3 Participants of Events</p>
+                </header>
+                <div class="row  justify-content-center prj align-items-center" style="display: flex !important;">
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div class="card mb-3" style="color:#fff;">
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <h5 class="card-title">Front-End Web Development Workshop</h5><br>
+                                    <p class="card-text">
+                                        <video style="width: 100%; height: auto;" autoplay loop controls muted>
+                                            <source src="img/assets/showcase videos/frontend workshop.mp4" type="video/mp4">
+                                        </video>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+                    <!-- here you can add more videos farhan -->
+                    <!--
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div class="card mb-3" style="color:#fff;">
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <h5 class="card-title">Front-End Web Development Workshop</h5><br>
+                                    <p class="card-text">
+                                        <video style="width: 100%; height: auto;" autoplay loop controls muted>
+                                            <source src="https://dms.licdn.com/playlist/C4E05AQHMeqaehuMIdQ/mp4-720p-30fp-crf28/0/1633972290761?e=1639483200&v=beta&t=TK1I0XoxrQ8EaZHqUTZCCu29zQUG6vweHKnbQO92OBI" type="video/mp4">
+                                        </video>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-sm-6 col-md-6 mb-3">
+                    </div>-->
+                </div>
+            </div>
+        </section>
+        
+
+            <section id="faqs" class="section-spacer section-faq" >
+                <div class="container" style="box-shadow: 10px 25px 45px rgb(0 0 0 / 10%);padding-top: 10px;border: 1px solid rgba(0, 0, 0, 0.1);">
+                    <header class="section-header text-center">
+                        <h1 class="section-title wow fadeInUp">Frequently Asked Questions</h1>
+                    </header>
+                    <div class="row">
+                        <div class="col-sm-6 wow fadeInUp">
+                            <div class="card">
+                                <div class="card-body" style="color: white;">
+                                    <h3 class="card-title">Who can become a member?</h3>
+                                    <p>The club is open to any student, ranging from novice developers who are just starting,
+                                    to advanced developers who want to further their skills.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeInUp">
+                            <div class="card">
+                                <div class="card-body" style="color: white;">
+                                    <h3 class="card-title">How frequently do events and workshops occur?</h3>
+                                    <p>We often have hands-on session every Saturday & Sunday . We also
+                                        hold
+                                        workshops and showcases & we would recommend you to join our community on <a href="https://chat.whatsapp.com/Bq69TNX0e2z5KjSV9SCcFb">Whatsapp</a>
+                                    to get updates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 wow fadeInUp">
+                            <div class="card">
+                                <div class="card-body" style="color: white;">
+                                    <h3 class="card-title">What should I carry when attending a workshop?</h3>
+                                    <p>We recommend you carry with you a notebook, pen and a laptop because more often than not
+                                        we
+                                        get our hands dirty with code. Most importantly, bring along a healthy dose of
+                                        curiosity
+                                    and enthusiasm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeInUp">
+                            <div class="card">
+                                <div class="card-body" style="color: white;">
+                                    <h3 class="card-title">Who should I reach out to if I have any questions?</h3>
+                                    <p>If you have any questions or comments, please don't hesitate to contact us by clicking
+                                        the
+                                        button below. We would be happy to stay engaged via email or in person even after the
+                                    events.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- End Technologies Section -->
+        
+        <!-- ======= Team Section ======= -->
+        
+    </div>
+    <footer class="section-spacer footer-section">
+        <div class="container">
+            <div class="row flex-column-reverse flex-sm-row flex-lg-row">
+                <div class="col-md-4 col-12">
+                    <div class="footer-widget first-of-footer-widget" style="color: white;">
+                        <!-- <img src="img/dsc_logo.png" alt="GDSC Anjuman-I-Islam's Kalsekar Technical Campus footer logo"> -->
+                        <p>Copyright &copy
+                            <script type="text/javascript">document.write(new Date().getFullYear());</script>. All
+                            Rights Reserved to <u>GDSC UEMJ</u>.
+                        </p>
+                        <span>Feel free to drop us an email at </span><br>
+                        <a class="mail" href="mailto:gdscuemjaipur@gmail.com">gdscuemjaipur@gmail.com</a>
+                        <ul class="social-list__inline mt-10">
+                            <li>
+                                <a class="twitter" href="https://twitter.com/gdsc_uemj" target="_blank" rel="noopener">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="insta" href="https://www.instagram.com/uemjaipur_gdsc/" target="_blank" rel="noopener">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="insta" href="https://www.facebook.com/gdscuemj" target="_blank" rel="noopener">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <!--<li>
+                                <a class="github" href="#" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>-->
+                            <li>
+                                <a class="linkedin" href="https://www.linkedin.com/company/gdsc-uemjaipur/" target="_blank"
+                                    rel="noopener">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-10">
+                    <div class="row">
+                        <div class="col-md-4 col-6">
+                            <div class="footer-widget" style="color: white;">
+                                <h4 class="footer-widget__title">Programs</h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="https://www.womentechmakers.com/" target="_blank" rel="noreferrer">Women
+                                        Techmakers</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://developers.google.com/experts/" target="_blank" rel="noreferrer">Google
+                                        Developer Experts</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://developers.google.com/programs/community/" target="_blank" rel="noreferrer">Google
+                                        Developer Groups</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="footer-widget" style="color: white;">
+                                <h4 class="footer-widget__title">Developers</h4>
+                                <ul>
+                                    <li class="list-unstyled">
+                                        <li>
+                                            <a href="https://console.firebase.google.com/" target="_blank" rel="noreferrer">Firebase
+                                            console</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://console.cloud.google.com/" target="_blank" rel="noreferrer">Google
+                                            Cloud Platform</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://console.actions.google.com/" target="_blank" rel="noreferrer">Actions
+                                            on Google</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="footer-widget" style="color: white;">
+                                    <h4 class="footer-widget__title">Contribute</h4>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" target="_blank"
+                                            rel="noreferrer">File a bug</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" rel="noreferrer">View
+                                            source</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- </div> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js" integrity="sha512-zBTnX97k269iewUwROiWwO82A6uXO4lcjq0Z4xnvO+qAblC/RMQRUu8fQVKtSFhPNKD5Xzh9PMoZG7+LnmH1Hg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
+</html>
