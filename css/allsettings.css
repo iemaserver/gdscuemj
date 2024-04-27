@@ -1,0 +1,60 @@
+
+/* **************************** Fonts **************************** */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+/* **************************** Site General Settings **************************** */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+/* **************************** Body Settings **************************** */
+
+body {
+  /* background: var(--darkwhite); */
+  font-family: var(--mainfont);
+}
+
+/* **************************** Root Variables **************************** */
+
+:root {
+
+  /* Default Fonts */
+  --mainfont: "Poppins", sans-serif;
+  --primaryfont_sans: "Noto Sans Display", sans-serif;
+  --primaryfont_serif: "Noto Serif", serif;
+  --primaryfont_mono: "Noto Sans Mono", monospace;
+}
+
+/* **************************** Scroll Bar **************************** */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  /* background: transparent; */
+  background: #c9cefb;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background: linear-gradient(to bottom, navy,blue,red,yellow, green); */
+  border-radius: 2px;
+  /* background: #495464; */
+  background: #0000ff;
+}
+
+/* **************************** Selection **************************** */
+
+::selection {
+  color: #ffffff;
+  background: #9a00c5;
+}
+
+/* **************************** Styles End **************************** */
