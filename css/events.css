@@ -1,0 +1,708 @@
+/********** Event CSS **********/
+/*******************************/
+
+#events {
+    margin-top: 12vh;
+    margin-bottom: 10vh;
+}
+
+.event-head {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+}
+
+.event-head .event-title {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    color: #464545;
+    font-size: 1.8rem;
+}
+
+.event-head .event-title:hover {
+    color: #ff4500;
+    transition: color 0.3s ease;
+}
+
+.event-head .event-subtitle {
+    color: #464545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.event-head .event-subtitle:hover {
+    color: #0000ff;
+    transition: color 0.2s ease;
+}
+
+.event-boxes {
+    margin-top: 50px;
+}
+
+.event-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.event-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    border: none;
+    background-color: #ebebeb;
+    transition: background 0.4s ease-in-out;
+
+}
+
+.event-btn:hover {
+    background-color: #d4d4d4;
+
+}
+
+/* .ongoing {
+    background-color: #0000ff;
+    color: #ffffff;
+} */
+
+/* .event-btn:focus {
+    background-color: #0000ff;
+    color: #ffffff;
+} */
+
+.special {
+    background-color: #ff3522;
+    color: #ffffff;
+}
+
+.default {
+    background: #ff3522;
+    color: #ffffff;
+}
+
+.special:hover {
+    background-color: #ff1c08;
+}
+
+.default:hover {
+    background: #ff1c08;
+}
+
+
+.event-div1 {
+    display: none;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.event-div2 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.event-div3 {
+    display: none;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Responsive Media Query*/
+@media only screen and (max-width: 1024px) {
+    .container {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 1111px) {
+
+    .event-div1,
+    .event-div3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        margin-bottom: 8vh;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 80vw;
+    }
+
+    .event-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-btn {
+        margin-bottom: 10px;
+    }
+
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+
+.container {
+    height: 480px;
+    width: 370px;
+    perspective: 800px;
+    position: relative;
+    margin: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    transition: scale 0.5s ease;
+}
+
+.container:hover {
+    scale: 1.02;
+    transition-delay: 0.2s;
+}
+
+.container:hover>.card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+    transition-delay: 0.6s;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: all 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front {
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+
+}
+
+.back {
+    background-color: #f4f4f4;
+    transform: rotateY(180deg);
+    padding: 10px 20px;
+    margin: 10px auto;
+    animation: fadeIn 0.5s ease;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+.col-1 {
+    background-image: url(../images/st6.jpg);
+    box-shadow: 0 0 0 3px inset hsl(240, 100%, 50%);
+    border-bottom: 8px solid blue;
+    background-size: cover;
+    /* background-size: contain; */
+
+}
+
+.col-2 {
+    background-image: url(../images/st4.jpg);
+    box-shadow: 0 0 0 3px inset green;
+    border-bottom: 8px solid green;
+    background-size: cover;
+    /* background-size: contain; */
+
+
+}
+
+.col-3 {
+    background-image: url(../images/staytuned.jpg);
+    box-shadow: 0 0 0 3px inset blue;
+    border-bottom: 8px solid blue;
+    background-size: cover;
+
+
+}
+
+.col-4 {
+    background-image: url(../images/event-data.png);
+    box-shadow: 0 0 0 3px inset orange;
+    border-bottom: 8px solid orange;
+    background-size: cover;
+}
+
+.col-5 {
+    background-image: url(../images/event-cloud.png);
+    box-shadow: 0 0 0 3px inset red;
+    border-bottom: 8px solid red;
+    background-size: contain;
+}
+
+.col-6 {
+    background-image: url(../images/event-techmark.png);
+    box-shadow: 0 0 0 3px inset hsl(240, 100%, 50%);
+    border-bottom: 8px solid blue;
+    background-size: cover;
+
+}
+
+.col-7 {
+    background-image: url(../images/event-welcome.png);
+    box-shadow: 0 0 0 3px inset green;
+    border-bottom: 8px solid green;
+
+}
+.col-8 {
+    background-image: url(../images/dsabootcamp.jpg);
+    box-shadow: 0 0 0 3px inset blue;
+    border-bottom: 8px solid blue;
+    background-size: contain;
+
+}
+.col-9 {
+    background-image: url(../images/event2.png);
+    box-shadow: 0 0 0 3px inset red;
+    border-bottom: 8px solid red;
+    background-size: contain;
+
+}
+
+.event-underline {
+    width: 73%;
+    height: 5px;
+    /* background: blue; */
+    border-radius: 3px;
+    position: absolute;
+    left: 41px;
+    overflow: hidden;
+}
+
+.event-underline-green {
+    background: green;
+}
+
+.event-underline-blue {
+    background: blue;
+}
+
+.event-underline-yellow {
+    background: orange;
+}
+
+.event-underline-red {
+    background: red;
+}
+
+.event-underline span {
+    width: 25px;
+    height: 100%;
+    background: #f4f4f4;
+    position: absolute;
+    top: 0;
+    animation: moving 2s linear infinite;
+}
+
+.back-blue {
+    border: 3px solid blue;
+
+}
+
+.back-green {
+    border: 3px solid green;
+}
+
+.back-yellow {
+    border: 3px solid orange;
+}
+
+.back-red {
+    border: 3px solid red;
+}
+
+.back-head,
+.back-title {
+    margin-bottom: 10px;
+}
+
+.back-head {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.back-title {
+    text-decoration: underline;
+}
+
+.back-title-blue {
+    color: blue;
+}
+
+.back-title-green {
+    color: green;
+}
+
+.back-title-red {
+    color: red;
+}
+
+.back-title-yellow {
+    color: orange;
+}
+
+.event-details {
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.event-subtitle {
+    color: #535353;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.event-para {
+    color: #444;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+.event-para-past{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.event-details p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.event-details p:last-child {
+    margin-bottom: 10px;
+}
+
+.rsvp-btn {
+    display: inline-block;
+    color: inherit;
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 2vh 0;
+    transition: all 0.5s ease;
+}
+
+.hover-blue:hover {
+    box-shadow: 0 0 0 22px inset blue;
+    color: #ffffff;
+}
+
+.blue {
+    box-shadow: 0 0 0 2px inset blue;
+}
+
+.hover-red:hover {
+    box-shadow: 0 0 0 22px inset red;
+    color: #ffffff;
+}
+
+.red {
+    box-shadow: 0 0 0 2px inset red;
+}
+
+.hover-orangered:hover {
+    box-shadow: 0 0 0 22px inset orangered;
+    color: #ffffff;
+}
+
+.orangered {
+    box-shadow: 0 0 0 2px inset orangered;
+}
+
+.hover-green:hover {
+    box-shadow: 0 0 0 22px inset green;
+    color: #ffffff;
+}
+
+.green {
+    box-shadow: 0 0 0 2px inset green;
+}
+
+.hover-yellow:hover {
+    box-shadow: 0 0 0 22px inset orange;
+    color: #000000;
+}
+
+.yellow {
+    box-shadow: 0 0 0 2px inset orange;
+}
+
+.event-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* underline start */
+.event-details p {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.event-details p:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: #ccc;
+    bottom: -5px;
+}
+
+.event-details p i {
+    margin-right: 10px;
+}
+
+/* underline end */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.image-section {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.image-blue {
+    border: 2px solid blue;
+}
+
+.image-green {
+    border: 2px solid green;
+}
+
+.image-red {
+    border: 2px solid red;
+}
+
+.image-yellow {
+    border: 2px solid orange;
+}
+
+/* ******************** Responsive Styles ******************** */
+@media only screen and (max-width: 600px) {
+    .back {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .event-details {
+        font-size: 16px;
+    }
+}
+
+
+.event-page-hr {
+    width: 90%;
+    border-bottom: 2px solid blue;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px blue;
+}
+
+
+/* ******************** FAQ Section ******************** */
+#faq {
+    position: relative;
+    top: 0px;
+    line-height: 1.8rem;
+    padding: 0px 40px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.faqheading {
+    font-size: calc(1.375rem + 1.5vw);
+    color: #26353c;
+    margin: 40px 0px;
+}
+
+.center {
+    text-align: center;
+}
+
+.accordian {
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px 20px 8px 40px;
+    margin: 30px 0px;
+    transition: all 0.5s ease-in-out;
+}
+
+.accordian:hover {
+    background-color: #f3f3f3;
+}
+
+.icon {
+    background-color: #dadeff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 16px;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+
+}
+
+.icon:hover {
+    background-color: #cdd1ff;
+
+}
+
+.icon.active {
+    transform: rotate(-180deg);
+}
+
+.questions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #383535;
+}
+
+.answers {
+    font-size: 0.9rem;
+    color: black;
+    max-height: 0px;
+    overflow: hidden;
+    padding-top: 10px;
+    transition: max-height 0.4s ease-in-out;
+
+}
+
+.active.answers {
+    /* max-height: 300px; */
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive FAQ  */
+
+@media only screen and (max-width: 768px) {
+    #faq {
+        width: 90%;
+        padding: 0;
+    }
+
+    .faqheading {
+        font-size: 1.5rem;
+    }
+
+    .accordian {
+        padding: 12px 20px;
+    }
+
+    .icon {
+        margin-left: 0;
+    }
+
+    .questions {
+        font-size: 1rem;
+    }
+
+    .answers {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .faqheading {
+        font-size: 1.2rem;
+    }
+
+    .accordian {
+        padding: 12px 15px;
+    }
+
+    .questions {
+        font-size: 0.9rem;
+    }
+
+    .answers {
+        font-size: 0.8rem;
+    }
+}
+
+/* ********************* FAQ END ********************* */
+
+
+/* ****************************************** */
+/* ****************************************** */
+/* ********** CSS END ********** */
+/* ****************************************** */
+/* ****************************************** */
