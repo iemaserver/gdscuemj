@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-height: 100vh;
+  background: url(../images/bg_shape.png) #f5f5f5 fixed center / cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #ffffff;
+  overflow-x: hidden;
+
+}
+
+.html {
+  scroll-behavior: smooth;
+}
+
+#banner {
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/landing4.jpeg) fixed no-repeat 50% 50% / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#banner div.banner {
+  position: relative;
+  margin: 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#banner div.banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: #ffffff40;
+  box-shadow: 0 8px 16px #32456b40;
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transition-delay: 1s;
+}
+
+
+#banner div.banner h4,
+#banner div.banner h2 {
+  position: relative;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #32456b;
+  font-weight: bolder;
+}
+
+#banner div.banner h2 span {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  clip-path: inset(0 100% 0 0);
+  transition: all 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+  transition-delay: 1s;
+}
+
+#banner div.banner h4 {
+  margin: 0.5rem auto;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  transform: scale(0);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.61, 0.97);
+}
+
+#banner div.banner a.btn_start {
+  margin: auto;
+  padding: 0.6rem 3.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000;
+  background: #ffffff;
+  box-shadow: 0 8px 10px #00000080;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  transform: scale(0);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.61, 0.97);
+  transition-delay: 0.8s;
+}
+
+/* ********************************* Loaded Animation ********************************* */
+
+#banner div.banner.loaded::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+#banner div.banner.loaded h1 span,
+#banner div.banner.loaded h2 span {
+  clip-path: inset(0 0 0 0);
+}
+
+
+#banner div.banner.loaded h4,
+#banner div.banner.loaded a.btn_start {
+  transform: scale(1);
+}
+
+/* ********************************* Responsive Medias ********************************* */
+
+@media (max-width: 1240px) {
+  section#banner div.banner object {
+    width: 40rem;
+  }
+
+  section#banner div.banner h4 span {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section#banner div.banner object {
+    width: 30rem;
+  }
+
+  section#banner div.banner h4 span {
+    font-size: 6rem;
+  }
+
+  section#banner div.banner h2 span {
+    font-size: 3rem;
+  }
+
+  section#banner div.banner h4 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 472px) {
+  section#banner div.banner object {
+    width: 20rem;
+  }
+
+  section#banner div.banner h4 span {
+    margin: 2rem auto;
+    font-size: 5rem;
+  }
+
+  section#banner div.banner h2 span {
+    margin: 1.5rem auto;
+    font-size: 2.5rem;
+  }
+
+  section#banner div.banner h4 {
+    margin: 1.5rem auto;
+    font-size: 3rem;
+  }
+
+  section#banner div.banner a.btn_start {
+    margin: 2rem auto;
+    font-size: 2.2rem;
+  }
+}
+
+
+/* Landing Page LOGO */
+@media screen and (max-width: 768px) {
+  .gdsc-logo {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .top-left,
+  .bottom-left,
+  .top-right,
+  .bottom-right {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .gdsc-logo {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+
+.gdsc-logo {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  rotate: 90deg;
+}
+
+.top-left,
+.bottom-left,
+.top-right,
+.bottom-right {
+  position: absolute;
+  width: 120px;
+  height: 25px;
+  border-radius: 50px;
+  padding: 20px;
+  visibility: hidden;
+  animation: fadeIn 1s ease-in-out forwards, scaleIn 1s ease-in-out forwards;
+  transform-origin: center;
+}
+
+.top-left {
+  left: 0;
+  top: 0;
+  rotate: -62deg;
+  background-color: #14b25f;
+  z-index: 1;
+  animation-delay: 1.5s;
+
+}
+
+.bottom-left {
+  left: 0;
+  bottom: 0;
+  rotate: 62deg;
+  background-color: #f74037;
+  animation-delay: 0.8s;
+}
+
+.top-right {
+  right: 41px;
+  top: 0px;
+  rotate: -120deg;
+  background-color: #ffb808;
+  z-index: 0;
+  animation-delay: 0.8s;
+
+}
+
+.bottom-right {
+  left: 39.42px;
+  bottom: -1px;
+  rotate: 120deg;
+  background-color: #4a90f4;
+  animation-delay: 1.5s;
+}
+
+
+@keyframes fadeIn {
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
