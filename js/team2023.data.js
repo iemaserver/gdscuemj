@@ -22,12 +22,12 @@ let facul = [
 let leadMemberDetails2023 = [
   {
     id: 0,
-    name: "Shubham Gourisaria",
+    name: "Subham Gourisaria",
     avatar: "../assets/img/team/subham_gourisaria.webp",
     badges: `
-                      <span class="blue">2023</span>
                       <span class="green">GDSC</span>
                       <span class="yellow">Lead</span>
+                      <span class="blue">2023</span>
                   `,
     cardBorderColor: "red",
 
