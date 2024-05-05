@@ -330,16 +330,22 @@ nav a {
 
 }
 @media screen and (max-width:508px) {
-    .facebook-share-hidden .hiddenmail{
+    .facebook-share-hidden{
         display: none;
     }
     
 }
 @media screen and (max-width:780px) {
     .landing-left{
-        margin-top: 15vh;
+        margin-top: 12vh;
     }
     
+}
+@media screen and (max-width: 450px) {
+    .hiddenmail{
+        display: none;
+    }
+
 }
 
 /* ********************* Navbar/Top Bar CSS ********************* */
