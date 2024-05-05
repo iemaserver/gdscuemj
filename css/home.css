@@ -163,7 +163,12 @@ a:hover {
     border-right: 1px solid #808080;
     padding: 0 8px;
 }
-
+.top-bar .mailto{
+    color: #000;
+}
+.top-bar .mailto:hover{
+    color: #393947;
+}
 .top-bar span:hover {
     color: #393947;
 }
@@ -325,10 +330,22 @@ nav a {
 
 }
 @media screen and (max-width:508px) {
-    .facebook-share{
+    .facebook-share-hidden{
         display: none;
     }
     
+}
+@media screen and (max-width:780px) {
+    .landing-left{
+        margin-top: 12vh;
+    }
+    
+}
+@media screen and (max-width: 450px) {
+    .hiddenmail{
+        display: none;
+    }
+
 }
 
 /* ********************* Navbar/Top Bar CSS ********************* */
@@ -1148,6 +1165,10 @@ footer {
     margin: 15px 0;
 
 }
+.footer-contact a{
+    color: #fff;
+}
+
 
 .footer-contact:hover {
     border-bottom: 1px solid #0000ff;
